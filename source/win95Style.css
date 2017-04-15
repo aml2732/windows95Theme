@@ -1,0 +1,50 @@
+.win-container{
+  background-color: #bdbdbd;
+  padding:2px;
+  border-style: ridge;
+}
+
+.win-header-bar{
+  background-color: #00007b;
+  min-height: 23px;
+  display:flex;
+  flex-direction:row;
+  justify-content: space-between;
+}
+
+.win-header-title{
+  padding: 2px;
+  color: white;
+}
+
+.win-button-group{
+  display:flex;
+  flex-direction:row;
+  align-items: center;
+}
+
+.win-button{
+  background-color: #bdbdbd;
+  min-height:15px;
+  min-width:15px;
+  margin-right:2px;
+  max-width:15px;
+  max-height:15px;
+  flex:0 0 auto;
+  border-style: outset;
+  border-width:2px;
+}
+
+.win-button>svg{
+
+}
+
+.win-content{
+  margin-top:2px;
+  border-style: inset;
+  border-width:1px;
+}
+
+.win-inner-content{
+  background-color:white;
+}
