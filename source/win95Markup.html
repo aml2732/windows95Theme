@@ -1,6 +1,6 @@
 <div class="win-container">
   <div class="win-header-bar">
-    <div class="win-header-title">Title</div>
+    <div class="win-header-title">{{subject}}</div>
     <div class="win-button-group">
       <span class="win-button win-minimize">
         <svg width="15" height="15" viewBox="0 0 15 15">
@@ -22,7 +22,7 @@
     </div>
   </div>
   <div class="win-content">
-    <div class="win-inner-content"> Helloworld </div>
+    <div class="win-inner-content" ng-transclude></div>
   </div>
   <div class="win-footer"></div>
 </div>

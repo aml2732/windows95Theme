@@ -17,7 +17,7 @@ The /dist/ folder contains built and ready-to-go parials.
  Sample html:
  ```
  <div ng-app="myApp">
-   <win95theme></win95theme>
+   <win95theme subject="'My Title'"></win95theme>
  </div>
  ```
 ### Method 2
@@ -44,10 +44,15 @@ The /dist/ folder contains built and ready-to-go parials.
  ```
 
 
-## Customizing/Developing for this project:
- If you plan on developing for this Project, get started quick by:
- * additionally install the test dependencies, if you had not by `npm install`
- * `cd windows95Theme`
- * `./node_modules/.bin/webpack --config webpack.config_test.js` to build the test application. and `./node_modules/.bin/webpack --config webpack.config.js` to build outpus to the `dist` folder
- * If using the testing application, run `node test/test.js`
- * view at  `http://localhost:3000/public/index.html`
+## Customizing/Developing for this project:  
+ If you plan on developing for this Project, get started quick by:  
+ * additionally install the test dependencies, if you had not by `npm install`  
+ * `cd windows95Theme`  
+ * `./node_modules/.bin/webpack --config webpack.config.js` to build outpus to the `dist` folder  
+ * If using the testing application, run `node test/test.js`  
+ * view at  `http://localhost:3000/test`  
+
+## Directive Options:  
+ `subject` : The title of your window. IMPORTANT: Note the following format:   
+   * If specifying a string inline use the syntax: `subject="'My Title'"`  
+   * If specifying a variable name that contains the subject, use the syntax: `subject="myvar"`  

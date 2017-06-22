@@ -4,7 +4,15 @@
 </head>
 <body>
   <div ng-app="myApp">
-    <win95theme></win95theme>
+    <win95theme subject="'My Title'">
+      Inside the win95Theme <br/>
+      Testing That my content I type between the win95theme tags shows up.
+      <p>Including paragraphs,</p>
+      Plain text,
+      <span>spans,</span>
+      <div>and of course divs</div>
+    </win95theme>
+    <div>outside of win95Theme {{2+3}}</div>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js" ></script>
   <script src="./public/test_clientWebApplication.js" ></script>
