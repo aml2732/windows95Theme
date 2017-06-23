@@ -55,8 +55,12 @@ The /dist/ folder contains built and ready-to-go parials.
 ## Directive Arguments:  
  `subject` : The title of your window. IMPORTANT: Note the following format:   
    * If specifying a string inline use the syntax: `subject="'My Title'"`  
-   * If specifying a variable name that contains the subject, use the syntax: `subject="myvar"` 
-   `options` : options is an object containing settings for your usage of the directive. `options="myObj"` where `myObj` is in the form of `{optionName: optionValue}`
+   * If specifying a variable name that contains the subject, use the syntax: `subject="myvar"`
+   `options` : options is an object containing settings for your usage of the directive. `options="myObj"` where `myObj` is in the form of `{optionName: optionValue}`  
+
    | Option Name  | Option Value Type | Description |
-   | ------------- | ------------- | ------------- |
-   | closed  | boolean | If true: directive is hidden. If false: directive is shown |
+   | ------------- | ------------- | ------------- |  
+   | closed  | boolean  | if true: directive is hidden. If false: directive is shown |  
+   | maximized | boolean | if true: directive takes up max space. If false: directive takes up option.size-specified space |  
+   | size | object | in the form `{width: value, height: value}` |
+   | overflow | string | Either the values `scroll`, `auto`, `hidden`, `y-scroll`, `x-scroll`  |

@@ -1,4 +1,4 @@
-<div class="win-container" ng-hide="options.closed">
+<div class="win-container" ng-hide="options.closed"  style="{{options.size&&options.size.width ? ('width:' + options.size.width + ';') : ''}}{{options.size&&options.size.height ? ('height:' + options.size.height + ';') : ''}}">
   <div class="win-header-bar">
     <div class="win-header-title">{{subject}}</div>
     <div class="win-button-group">
@@ -22,7 +22,15 @@
     </div>
   </div>
   <div class="win-content">
-    <div class="win-inner-content" ng-transclude></div>
+    <div class="win-inner-content"
+    ng-class="{
+      'overflow-scroll':options.overflow&&options.overflow=='scroll',
+      'overflow-auto': options.overflow&&options.overflow=='auto',
+      'overflow-hidden': options.overflow&&options.overflow=='hidden',
+      'overflow-y-scroll': options.overflow&&options.overflow=='y-scroll',
+      'overflow-x-scroll': options.overflow&&options.overflow=='x-scroll'
+    }"
+    ng-transclude></div>
   </div>
   <div class="win-footer"></div>
 </div>

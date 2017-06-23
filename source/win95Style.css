@@ -2,6 +2,8 @@
   background-color: #bdbdbd;
   padding:2px;
   border-style: ridge;
+  display:flex;
+  flex-direction: column;
 }
 
 .win-header-bar{
@@ -43,8 +45,20 @@
   margin-top:2px;
   border-style: inset;
   border-width:1px;
+  display:flex;
+  flex-direction: row;
+  align-self: stretch;
+  flex-grow: 1;
 }
 
 .win-inner-content{
   background-color:white;
+  flex-grow: 1;
 }
+
+/*Conditionals*/
+.overflow-scroll{overflow: scroll;}
+.overflow-auto{overflow:auto;}
+.overflow-hidden{overflow: hidden;}
+.overflow-y-scroll{overflow-y: scroll;overflow-x:hidden;}
+.overflow-x-scroll{overflow-x: scroll;overflow-y:hidden;}
