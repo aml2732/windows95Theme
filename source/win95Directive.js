@@ -1,7 +1,13 @@
 module.exports = function() {
     return {
         scope: {
-          "subject": "=subject"
+          "subject": "=",
+          "options": "="
+        },
+        controller: function($scope){
+          $scope.close = function(){
+            $scope.options.closed = true;
+          }
         },
         restrict: "E",
         transclude: true,

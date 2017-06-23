@@ -1,4 +1,4 @@
-<div class="win-container">
+<div class="win-container" ng-hide="options.closed">
   <div class="win-header-bar">
     <div class="win-header-title">{{subject}}</div>
     <div class="win-button-group">
@@ -13,7 +13,7 @@
           <rect width="9" height="9" x="3" y="3" stroke="black" stroke-width="2" fill="none"/>
         </svg>
       </span>
-      <span class="win-button win-close">
+      <span class="win-button win-close" ng-click="close()">
         <svg width="15" height="15" viewBox="0 0 15 15">
           <line x1="3" y1="3" x2="12" y2="12" stroke="black" stroke-width="2" />
           <line x1="3" y1="12" x2="12" y2="3" stroke="black" stroke-width="2" />
