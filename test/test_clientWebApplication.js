@@ -5,6 +5,8 @@ app.controller("testparentcontroller", ['$scope', function($scope) {
   $scope.windowsthemedata = {
     closed : false,
     //size : { width: "200px", height: "100px"},
-    //overflow: "y-scroll"
+    overflow: "y-scroll",
+    maximized: false,
+    //maximizedtype: "viewport"
   }
 }]);

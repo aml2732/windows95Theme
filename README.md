@@ -17,7 +17,7 @@ The /dist/ folder contains built and ready-to-go parials.
  Sample html:
  ```
  <div ng-app="myApp">
-   <win95theme subject="'My Title'"></win95theme>
+   <win95theme subject="'My Title'" class="win-95-theme"></win95theme>
  </div>
  ```
 ### Method 2
@@ -29,7 +29,7 @@ The /dist/ folder contains built and ready-to-go parials.
  </head>
  <body>
    <div ng-app="myApp">
-     <win95theme></win95theme>
+     <win95theme class="win-95-theme" subject="'myTitle'" options="myoptions"></win95theme>
    </div>
    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js" ></script>
    <script src="./win95Global.js" ></script>
@@ -61,6 +61,7 @@ The /dist/ folder contains built and ready-to-go parials.
    | Option Name  | Option Value Type | Description |
    | ------------- | ------------- | ------------- |  
    | closed  | boolean  | if true: directive is hidden. If false: directive is shown |  
-   | maximized | boolean | if true: directive takes up max space. If false: directive takes up option.size-specified space |  
-   | size | object | in the form `{width: value, height: value}` |
+   | maximized | boolean | if true: directive takes up max space. If false: directive takes up option.size-specified space |
+   | maximizedtype | string | Either the values `flex` or `viewport` (flex is default and will take up as much room as possible) (viewport will take up the entire screen.) |
+   | size | object | in the form `{width: value, height: value}` If size is not set, the window will take up as much room as possible. |
    | overflow | string | Either the values `scroll`, `auto`, `hidden`, `y-scroll`, `x-scroll`  |
