@@ -1,7 +1,6 @@
 module.exports = function() {
     return {
         scope: {
-          "subject": "=",
           "options": "="
         },
         controller: function($scope){
@@ -11,6 +10,10 @@ module.exports = function() {
 
           $scope.maximize = function(){
             $scope.options.maximized = !$scope.options.maximized;
+          }
+
+          $scope.minimize = function(){
+            $scope.options.minimized = true;
           }
 
         },

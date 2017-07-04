@@ -2,9 +2,9 @@
 <head>
   <link rel="stylesheet" href="./public/win95Style.css">
 </head>
-<body>
-  <div ng-app="myApp" ng-controller="testparentcontroller" style="width:800px; height:500px;">
-    <win95theme subject="'My Title'" options="windowsthemedata" class="win-95-theme">
+<body ng-app="myApp" style="background-color: green;">
+  <div ng-controller="testparentcontroller" style="width:800px; height:500px;">
+    <win95theme options="windowsthemedata" class="win-95-theme">
       Inside the win95Theme <br/>
       Testing That my content I type between the win95theme tags shows up.
       <p>Including paragraphs,</p>
@@ -13,7 +13,15 @@
       <div>and of course divs</div>
     </win95theme>
     <div>outside of win95Theme {{2+3}}</div>
+    <win95theme options="windowsthemedata2" class="win-95-theme">
+      This is window 2 <br/>
+      Test Test Test
+    </win95theme>
   </div>
+  <div ng-controller="testparentqueuecontroller">
+    <startqueue class="start-queue" programs="programs"></startqueue>
+  </div>
+
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js" ></script>
   <script src="./public/test_clientWebApplication.js" ></script>
 </body>

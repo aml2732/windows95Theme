@@ -79,3 +79,32 @@
   left:0;
   right:0;
 }
+
+/* ----- start queue below here -----------*/
+.queue-container{
+  border-top-style: outset;
+  height: 25px;
+  background-color: #bdbdbd;
+  display:flex;
+  flex-direction: row;
+}
+
+.queue-container.absolute{
+  position:absolute;
+  bottom:0;
+  left: 0;
+  right: 0;
+}
+.queue-container.relative{
+
+}
+
+.queue-program{
+  min-width: 50px;
+  border-style: outset;
+  white-space:nowrap;
+  width: min-content;
+  padding-left: 5px;
+  padding-right: 5px;
+  cursor:pointer;
+}

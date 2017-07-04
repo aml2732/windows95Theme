@@ -1,1 +1,1 @@
-win95 = require("./win95Directive.js")
+win95 = require("./index.js")

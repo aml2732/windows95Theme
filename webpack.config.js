@@ -9,7 +9,7 @@ var path = require("path")
 module.exports = {
     entry: {
       win95Global: "./source/win95Entry",
-      win95Directive: "./source/win95Directive",
+      win95Theme: "./source/index",
       test_clientWebApplication: "./test/test_clientWebApplication"
     },
     output: {
