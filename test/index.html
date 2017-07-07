@@ -2,8 +2,8 @@
 <head>
   <link rel="stylesheet" href="./public/win95Style.css">
 </head>
-<body ng-app="myApp" style="background-color: green;">
-  <div ng-controller="testparentcontroller" style="width:800px; height:500px;">
+<body ng-app="myApp" style="background-color: green;" class="computer-container">
+  <div class="computer-content" ng-controller="testcontentcontroller">
     <win95theme options="windowsthemedata" class="win-95-theme">
       Inside the win95Theme <br/>
       Testing That my content I type between the win95theme tags shows up.
@@ -17,8 +17,10 @@
       This is window 2 <br/>
       Test Test Test
     </win95theme>
+
   </div>
-  <div ng-controller="testparentqueuecontroller">
+
+  <div class="computer-footer" ng-controller="testqueuecontroller">
     <startqueue class="start-queue" programs="programs"></startqueue>
   </div>
 

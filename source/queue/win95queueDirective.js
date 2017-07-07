@@ -11,7 +11,7 @@ module.exports = function(){
       }
 
       $scope.filterItemIsMinimized = function filterOutClosedAndNotMinimized(item){
-        return item.minimized
+        return item.minimized;
       }
     },
     restrict: "E",

@@ -62,6 +62,5 @@ The /dist/ folder contains built and ready-to-go parials.
    | ------------- | ------------- | ------------- |  
    | closed  | boolean  | if true: directive is hidden. If false: directive is shown |  
    | maximized | boolean | if true: directive takes up max space. If false: directive takes up option.size-specified space |
-   | maximizedtype | string | Either the values `flex` or `viewport` (flex is default and will take up as much room as possible) (viewport will take up the entire screen.) |
    | size | object | in the form `{width: value, height: value}` If size is not set, the window will take up as much room as possible. |
    | overflow | string | Either the values `scroll`, `auto`, `hidden`, `y-scroll`, `x-scroll`  |

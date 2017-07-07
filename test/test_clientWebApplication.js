@@ -6,11 +6,10 @@ var app = angular.module("myApp", []);
 var window1 = {
   name: "My Test",
   closed : false,
-  //size : { width: "200px", height: "100px"},
+  size : { width: "200px", height: "800px"},
   overflow: "y-scroll",
   maximized: false,
   minimized: false
-  //maximizedtype: "viewport"
 };
 
 var window2 = {
@@ -22,14 +21,14 @@ var window2 = {
 var programs = [window1, window2];
 console.log(programs);
 app.directive("win95theme", win95Explorer);
-app.controller("testparentcontroller", ['$scope', function($scope) {
+app.controller("testcontentcontroller", ['$scope', function($scope) {
   $scope.windowsthemedata = programs[0];
   $scope.windowsthemedata2 = programs[1];
 }]);
 
 
 app.directive("startqueue", startQueue);
-app.controller("testparentqueuecontroller", ['$scope', function($scope){
+app.controller("testqueuecontroller", ['$scope', function($scope){
   $scope.programs = programs;
   $scope.queuedata = {};//manually set height; absolute vs relative<-- default
 

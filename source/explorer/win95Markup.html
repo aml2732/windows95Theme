@@ -1,6 +1,6 @@
 <div class="win-container" ng-hide="options.closed || options.minimized"  style="{{options.size&&options.size.width&&!options.maximized ? ('width:' + options.size.width + '; flex-grow:0;') : ''}}
                                                             {{options.size&&options.size.height&&!options.maximized ? ('height:' + options.size.height + ';') : ''}}"
-                                                            ng-class="{'fullscreen': options.maximized&&options.maximizedtype=='viewport'}">
+                                                            ng-class="{'fullscreen': options.maximized}">
   <div class="win-header-bar">
     <div class="win-header-title">{{options.name}}</div>
     <div class="win-button-group">

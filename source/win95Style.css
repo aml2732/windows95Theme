@@ -1,9 +1,41 @@
+
+/*
 .win-95-theme{
   display:flex;
   flex-direction:row;
   flex-grow: 1;
   width: inherit;
   height:inherit;
+}
+*/
+
+.computer-container{
+  display:flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  margin:0px;
+}
+
+.computer-container .computer-content{
+  display:flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+}
+
+.computer-container .computer-footer{
+  flex: 0 1 25px;
+}
+
+/*
+win95theme, .win-95-theme{
+  display:inherit;
+  flex-direction:inherit;
+  flex:inherit;
+}
+*/
+
+.win-container.size-specified{
+  flex: 0 0 auto;
 }
 
 .win-container{
@@ -90,7 +122,7 @@
 }
 
 .queue-container.absolute{
-  position:absolute;
+  position:fixed;
   bottom:0;
   left: 0;
   right: 0;
