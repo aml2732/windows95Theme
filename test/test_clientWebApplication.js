@@ -5,21 +5,17 @@ var startQueue = win95Theme.queue;
 var app = angular.module("myApp", []);
 var window1 = {
   name: "My Test",
-  closed : false,
   size : { width: "200px", height: "800px"},
   overflow: "y-scroll",
-  maximized: false,
-  minimized: false
+  state: "default",
 };
 
 var window2 = {
   name: "my window 2",
-  close: false,
   overflow: "y-scroll"
 };
 
 var programs = [window1, window2];
-console.log(programs);
 app.directive("win95theme", win95Explorer);
 app.controller("testcontentcontroller", ['$scope', function($scope) {
   $scope.windowsthemedata = programs[0];

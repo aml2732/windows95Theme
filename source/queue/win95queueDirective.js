@@ -7,11 +7,11 @@ module.exports = function(){
     controller: function($scope){
       $scope.restore = function restore(index){
         console.log(index)
-        $scope.programs[index].minimized = false;
+        $scope.programs[index].state = $scope.programs[index].oldState || "default";
       }
 
       $scope.filterItemIsMinimized = function filterOutClosedAndNotMinimized(item){
-        return item.minimized;
+        return item.state == "minimized";
       }
     },
     restrict: "E",

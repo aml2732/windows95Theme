@@ -5,15 +5,24 @@ module.exports = function() {
         },
         controller: function($scope){
           $scope.close = function(){
-            $scope.options.closed = true;
+            $scope.options.oldState = $scope.options.state || "default";
+            $scope.options.state = "closed";
           }
 
           $scope.maximize = function(){
-            $scope.options.maximized = !$scope.options.maximized;
+            if($scope.options.state == "maximized"){
+              $scope.options.oldState = "maximized";
+              $scope.options.state = "default"
+            }
+            else{
+              $scope.options.oldState = "default";
+              $scope.options.state = "maximized"
+            }
           }
 
           $scope.minimize = function(){
-            $scope.options.minimized = true;
+            $scope.options.oldState = $scope.options.state || "default";
+            $scope.options.state = "minimized";
           }
 
         },
