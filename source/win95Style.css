@@ -140,3 +140,7 @@ win95theme, .win-95-theme{
   padding-right: 5px;
   cursor:pointer;
 }
+
+.absolute{
+  position:absolute;
+}
