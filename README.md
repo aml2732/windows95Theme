@@ -97,7 +97,7 @@ The /dist/ folder contains built and ready-to-go parials.
    | state | string | Can be either: 'default','maximized', 'minimized', 'closed' |
    | size | object | in the form `{width: value, height: value}` If size is not set, the window will take up as much room as possible. |
    | overflow | string | Either the values `scroll`, `auto`, `hidden`, `y-scroll`, `x-scroll`  |
-   | position | object | in the form `{x: value, y: value}` |
+   | position | object | in the form `{x: value, y: value}` where value is a number and does NOT specify a type like px or percent |
 
 
   **states:**  

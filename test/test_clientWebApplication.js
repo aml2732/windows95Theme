@@ -19,7 +19,7 @@ var window3 = {
   name: "my window 3",
   overflow:"y-scroll",
   size: { width: "200px", height: "100px"},
-  position: {x: "5px", y:"5px;"}
+  position: {x: "5", y:"5"}
 };
 
 var programs = [window1, window2, window3];
