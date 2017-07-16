@@ -1,4 +1,4 @@
-<div class="queue-container absolute">
+<div class="queue-container absolute" style="{{options.zindex ? ('z-index:'+options.zindex+';') : ''}}">
   <div ng-repeat="window in programs track by $index" class="queue-program" ng-click="restore($index)" ng-show="filterItemIsMinimized(window)">
     {{window.name}}
   </div>

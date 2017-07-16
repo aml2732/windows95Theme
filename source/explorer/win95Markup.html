@@ -4,8 +4,10 @@
      style="{{options.size&&options.size.width&&options.state!='maximized' ? ('width:' + options.size.width + '; flex-grow:0;') : ''}}
             {{options.size&&options.size.height&&options.state!='maximized' ? ('height:' + options.size.height + ';') : ''}}
             {{options.position&&options.position.x ? ('left:'+options.position.x + 'px;'): ''}}
-            {{options.position&&options.position.y ? ('top:'+options.position.y +'px;') : ''}}"
-    ng-class="{'fullscreen': options.state=='maximized', 'absolute': options.position}">
+            {{options.position&&options.position.y ? ('top:'+options.position.y +'px;') : ''}}
+            {{options.zindex ? ('z-index:'+options.zindex+';') : ''}}"
+    ng-class="{'fullscreen': options.state=='maximized', 'absolute': options.position}"
+    ng-click="selectWindow()">
   <div class="win-header-bar">
     <div class="win-header-title">{{options.name}}</div>
     <div class="win-button-group">

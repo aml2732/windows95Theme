@@ -3,7 +3,7 @@ module.exports = function() {
         scope: {
           "options": "="
         },
-        controller: function($scope){
+        controller: function($scope, $rootScope){
           $scope.close = function(){
             $scope.options.oldState = $scope.options.state || "default";
             $scope.options.state = "closed";
@@ -23,6 +23,10 @@ module.exports = function() {
           $scope.minimize = function(){
             $scope.options.oldState = $scope.options.state || "default";
             $scope.options.state = "minimized";
+          };
+
+          $scope.selectWindow = function(){
+            $rootScope.$emit("winzmax", [$scope.options.name]);
           };
 
         },
