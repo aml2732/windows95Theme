@@ -13,6 +13,7 @@ module.exports = function() {
             if($scope.options.state == "maximized"){
               $scope.options.oldState = "maximized";
               $scope.options.state = "default"
+              $rootScope.$emit("winzmax", [$scope.options.name]);
             }
             else{
               $scope.options.oldState = "default";

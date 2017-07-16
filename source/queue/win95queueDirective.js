@@ -8,6 +8,7 @@ module.exports = function(){
       $scope.options = $scope.options || {};
       $scope.restore = function restore(index){
         $scope.programs[index].state = $scope.programs[index].oldState || "default";
+        setNewTopZIndex($scope.programs[index].name)
       }
 
       $scope.filterItemIsMinimized = function filterOutClosedAndNotMinimized(item){
