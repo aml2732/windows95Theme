@@ -3,7 +3,7 @@ module.exports = function() {
         scope: {
           "options": "="
         },
-        controller: function($scope, $rootScope){
+        controller: function($scope, $rootScope, $document){
           $scope.close = function(){
             $scope.options.oldState = $scope.options.state || "default";
             $scope.options.state = "closed";
@@ -30,6 +30,10 @@ module.exports = function() {
             $rootScope.$emit("winzmax", [$scope.options.name]);
           };
 
+          $document.on("dragover", function(event){
+            $scope.endMouseX = event.clientX;
+            $scope.endMouseY = event.clientY;
+          })
         },
         link: function(scope, el, attrs, controller){
 
@@ -39,6 +43,7 @@ module.exports = function() {
               y: event.y
             };
             scope.oldPosition = position;
+            event.dataTransfer.setData("dragdroppos",JSON.stringify(position));
           });
 
           /*
@@ -46,14 +51,15 @@ module.exports = function() {
             x,y and corresponding clentX, pageX will similarly reference that point you clicked -NOT the start of the div/directive
           */
           el.bind("dragend", function(event){
+
             scope.options.position = scope.options.position || {};
             var oldPosition = scope.oldPosition;
-            var offsetX = event.x - oldPosition.x;
-            var offsetY = event.y - oldPosition.y;
-            scope.options.position.x = parseInt(scope.options.position.x) || 0;
-            scope.options.position.y = parseInt(scope.options.position.y) || 0;
-            scope.options.position.x += offsetX;
-            scope.options.position.y += offsetY;
+            var elementDimensions = event.target.getBoundingClientRect();
+            //console.log("calculate x:"+scope.endMouseX+" - ("+oldPosition.x+"- "+elementDimensions.left+" ) ");
+            //console.log("calculate y:"+scope.endMouseX+" - ("+oldPosition.y+"- "+elementDimensions.top+" ) ");
+            scope.options.position.x = scope.endMouseX - (oldPosition.x - elementDimensions.left);
+            scope.options.position.y = scope.endMouseY - (oldPosition.y - elementDimensions.top);
+
             scope.$apply()
           });
         },
