@@ -1,0 +1,146 @@
+
+/*
+.win-95-theme{
+  display:flex;
+  flex-direction:row;
+  flex-grow: 1;
+  width: inherit;
+  height:inherit;
+}
+*/
+
+.computer-container{
+  display:flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  margin:0px;
+}
+
+.computer-container .computer-content{
+  display:flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+}
+
+.computer-container .computer-footer{
+  flex: 0 1 25px;
+}
+
+/*
+win95theme, .win-95-theme{
+  display:inherit;
+  flex-direction:inherit;
+  flex:inherit;
+}
+*/
+
+.win-container.size-specified{
+  flex: 0 0 auto;
+}
+
+.win-container{
+  background-color: #bdbdbd;
+  padding:2px;
+  border-style: ridge;
+  display:flex;
+  flex-direction: column;
+  flex-grow:1;
+}
+
+.win-header-bar{
+  background-color: #00007b;
+  min-height: 23px;
+  display:flex;
+  flex-direction:row;
+  justify-content: space-between;
+}
+
+.win-header-title{
+  padding: 2px;
+  color: white;
+}
+
+.win-button-group{
+  display:flex;
+  flex-direction:row;
+  align-items: center;
+}
+
+.win-button{
+  background-color: #bdbdbd;
+  min-height:15px;
+  min-width:15px;
+  margin-right:2px;
+  max-width:15px;
+  max-height:15px;
+  flex:0 0 auto;
+  border-style: outset;
+  border-width:2px;
+}
+
+.win-button>svg{
+
+}
+
+.win-content{
+  margin-top:2px;
+  border-style: inset;
+  border-width:1px;
+  display:flex;
+  flex-direction: row;
+  align-self: stretch;
+  flex-grow: 1;
+}
+
+.win-inner-content{
+  background-color:white;
+  flex-grow: 1;
+}
+
+/*Conditionals*/
+.overflow-scroll{overflow: scroll; -moz-user-select: none;}
+.overflow-auto{overflow:auto; -moz-user-select: none;}
+.overflow-hidden{overflow: hidden;}
+.overflow-y-scroll{overflow-y: scroll;overflow-x:hidden; -moz-user-select: none}
+.overflow-x-scroll{overflow-x: scroll;overflow-y:hidden; -moz-user-select: none}
+
+.fullscreen{
+  position: fixed !important;
+  top:0 !important;
+  bottom:0 !important;
+  left:0 !important;
+  right:0 !important;
+}
+
+/* ----- start queue below here -----------*/
+.queue-container{
+  border-top-style: outset;
+  height: 25px;
+  background-color: #bdbdbd;
+  display:flex;
+  flex-direction: row;
+}
+
+.queue-container.absolute{
+  position:fixed;
+  bottom:0;
+  left: 0;
+  right: 0;
+}
+.queue-container.relative{
+
+}
+
+.queue-program{
+  min-width: 50px;
+  border-style: outset;
+  white-space:nowrap;
+  width: min-content;
+  padding-left: 5px;
+  padding-right: 5px;
+  cursor:pointer;
+}
+
+.absolute{
+  position:absolute;
+}
